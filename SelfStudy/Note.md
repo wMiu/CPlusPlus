@@ -114,9 +114,35 @@ int main(){
 	return 0;
 }
 ```
-
 #### for语句
 
+```C++
+for (init-statement; condition; expression)
+    block
+/* 
+ * 每个for 语句都包含两个部分 循环头和循环体。
+ * 循环头控制着循环体的执行次数，由三个部分组成：初始化语句(init-statement), 循环条件(conditon)，表达式(expression)。
+ * 循环头中初始化的变量，只能再循环体中使用，循环结束后将不能使用。初始化语句只会再循环开始的时候执行一次。
+ */
+for循环执行流程：
+    初始化一个变量，判断条件是否成立，如果成立则执行循环体，否则直接结束循环，当循环体中的所有语句全部执行完毕后，将会执行头中的表达式，再一次判断条件，...，重复这个过程直到条件不成立或遇到终止循环的其他条件如break。
+```
+使用for循环写1加到100
+```C++
+int main(){
+	int startNum = 0, endNum = 0;
+	cout << "请输入开始的数：";
+	cin >> startNum;
+	cout << "请输入结束的数：";
+	cin >> endNum;
+	cout << endl;
+	for (startNum; startNum <= endNum; ++startNum){
+		cout << startNum << " ";
+	}
+	cout << endl;
+	return 0;
+}
+```
 
 ### 函数(Function)
    - 函数定义需要满足四个条件
