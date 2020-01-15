@@ -152,6 +152,20 @@ int j;  //声明并定义j
 
 - 定义在函数外面的标识符**不建议**以下划线开头。(In addition, identifiers defined outside a function may not begin with an underscore.)
 
+##### 名字的作用域
+同一个名字出现在程序不同的位置，可能指向的不是同一个实体。
+- 作用域(scope)
+   - C++中大多数的作用域都以花括号`{}`分隔。
+   - 名字的有效区域始于名字的声明语句，以声明语句所在的作用域末端结束。
+```C++
+int main(){
+    if(1 < 0){
+        int a = 1;
+    }  // a 的作用域到此处结束。
+    
+}
+```
+
 #### 对象(Object)
 通常是指一块能存储数据并具有某种类型的内存空间，
 
